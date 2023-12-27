@@ -37,8 +37,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.pucpr.appdev.lojaonline.pages.carrinho.layouts.ListaDeCarrinhos
 import br.pucpr.appdev.lojaonline.pages.home.GetCarrinhosState
-import br.pucpr.appdev.lojaonline.pages.home.GetProdutosState
-import br.pucpr.appdev.lojaonline.pages.home.layouts.ListaDeProdutos
 import br.pucpr.appdev.lojaonline.pages.ui.theme.LojaOnlineTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -71,6 +69,8 @@ fun CarrinhoScreen(viewModel: CarrinhoViewModel) {
     val context = LocalContext.current
 
     val getCarrinhosState = viewModel.getCarrinhosState.collectAsState().value
+
+    val deleteCarrinhoState = viewModel.deleteCarrinhoState.collectAsState().value
     Scaffold(
         snackbarHost = {
             SnackbarHost(hostState = snackbarHostState)
@@ -128,6 +128,15 @@ fun CarrinhoScreen(viewModel: CarrinhoViewModel) {
     getCarrinhosState.apply {
         val state = this
         if(state is GetCarrinhosState.ErrorGetCarrinhosState){
+            scope.launch {
+                snackbarHostState.showSnackbar(state.message)
+            }
+        }
+    }
+
+    deleteCarrinhoState.apply {
+        val state = this
+        if(state is DeleteCarrinhoState.ErrorDeleteCarrinhoState){
             scope.launch {
                 snackbarHostState.showSnackbar(state.message)
             }
