@@ -48,9 +48,3 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md par
 ```
 
 ---
-
-### Notas Adicionais
-
-- Certifique-se de personalizar o README de acordo com as especificidades do seu projeto.
-- Inclua qualquer outra informação que você acredita ser relevante, como capturas de tela do aplicativo, detalhes adicionais sobre as funcionalidades, e informações sobre futuras funcionalidades planejadas.
-- Mantenha o README atualizado conforme o projeto evolui. Um README bem mantido é crucial para a compreensão e atração de outros desenvolvedores e usuários.
