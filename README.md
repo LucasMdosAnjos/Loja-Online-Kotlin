@@ -38,13 +38,3 @@ Passos para clonar o repositório e configurar o ambiente de desenvolvimento.
 ```bash
 git clone https://github.com/LucasMdosAnjos/Loja-Online-Kotlin.git
 ```
-
-## Licença
-
-Escolha uma licença para o seu projeto e inclua aqui. Por exemplo:
-
-```
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md para detalhes.
-```
-
----
