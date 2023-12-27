@@ -36,7 +36,7 @@ Liste as ferramentas e bibliotecas necessárias para rodar o projeto, como Andro
 Passos para clonar o repositório e configurar o ambiente de desenvolvimento.
 
 ```bash
-git clone [URL do Repositório]
+git clone https://github.com/LucasMdosAnjos/Loja-Online-Kotlin.git
 ```
 
 ## Licença
